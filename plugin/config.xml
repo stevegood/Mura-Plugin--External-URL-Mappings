@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>External URL Mappings</name>
+	<package>extURLMappings</package>
+	<loadPriority>5</loadPriority>
+	<version>1.0.44</version>
+	<provider>Steve Good</provider>
+	<providerURL>http://stevegood.org/</providerURL>
+	<category>Migrations</category>
+	<settings />
+	<EventHandlers>
+		<eventHandler event="onAdminModuleNav" component="eventHandlers.AdminEventHandler" persist="true" />
+		<eventHandler event="onApplicationLoad" component="eventHandlers.MainEventHandler" persist="true" />
+		<eventHandler event="onRequestStart" component="eventHandlers.MainEventHandler" persist="true" />
+		<eventHandler event="onGlobalRequestStart" component="eventHandlers.MainEventHandler" persist="true" />
+		<eventHandler event="standard404handler" component="eventHandlers.MainEventHandler" persist="true" />
+	</EventHandlers>
+	<DisplayObjects />
+</plugin>
