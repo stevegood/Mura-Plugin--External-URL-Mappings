@@ -40,7 +40,9 @@
 		<cfset local.contentid = application[request.extURLKey].urlService.getContentId(local.page,arguments.event.getValue('siteid')) />
 		
 		<cfif len(local.contentid)>
-			<cflocation url="#application.contentManager.read(contentid=local.contentid,siteid=arguments.event.getValue('siteid')).getURL()#" addtoken="false" />
+			<!--- Use a 301 instead to let search engines know this move is not temporary --->
+			<cfheader statuscode="301" statustext="Document Moved"> 
+			<cfheader name="Location" value="#application.contentManager.read(contentid=local.contentid,siteid=arguments.event.getValue('siteid')).getURL()#">
 		</cfif>
 	</cffunction>
 	
