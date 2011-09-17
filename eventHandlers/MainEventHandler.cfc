@@ -3,6 +3,7 @@
 	<cffunction name="onApplicationLoad" access="public" returntype="void" output="false">
 		<cfset var local = {} />
 		<cfset var key = hash('stevegood') />
+		<cfset local[key] = {} />
 		
 		<cfif !structKeyExists(application,key)>
 			<cfset application[key] = {} />
