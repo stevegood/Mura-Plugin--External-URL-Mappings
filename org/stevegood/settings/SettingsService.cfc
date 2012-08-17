@@ -19,7 +19,7 @@
 			<cfif len(structKeyList(local.fromFile))>
 				<cfset super.setValue(arguments.key,local.fromFile) />
 			<cfelse>
-				<cfset setValue(arguments.key,{}) />
+				<cfset setValue(arguments.key,structNew()) />
 			</cfif>
 		</cfif>
 		
