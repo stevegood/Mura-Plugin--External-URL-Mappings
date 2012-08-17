@@ -3,7 +3,7 @@
 	<name>External URL Mappings</name>
 	<package>extURLMappings</package>
 	<loadPriority>5</loadPriority>
-	<version>1.0.44</version>
+	<version>1.1.0</version>
 	<provider>Steve Good</provider>
 	<providerURL>http://stevegood.org/</providerURL>
 	<category>Migrations</category>
